@@ -19,11 +19,8 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class BlogsResource {
 
-    private static final List<Blog> blogList = new ArrayList<>(Arrays.asList(
-            new Blog("Title 0", "article 0"),
-            new Blog("Title 1", "article 1"),
-            new Blog("Title 2", "article 2")
-    ));
+    private BlogsRepository blogsRepository = new BlogsRepository;
+    private final List<Blog> blogList = blogsRepository.load();
 
     @GET
     public Response getAll() {
