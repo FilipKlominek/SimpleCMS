@@ -6,12 +6,26 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
 </h:head>
 <h:body>
-   <div class="navbar navbar-dark bg-dark">
-      <h2 class="text-light">Create New Blog</h2>
-   </nav>
-
+    <div class="navbar navbar-dark bg-dark">
+        <h2 class="text-light">Create New Blog</h2>
+    </div>
+    <div class="d-flex justify-content-center">
+        <h:form styleClass="d-flex flex-column w-50">
+            <h:outputLabel>Header</h:outputLabel>
+            <h:inputText/>
+            <h:form styleClass="d-flex flex-column w-50">
+                <h:outputLabel>Description</h:outputLabel>
+                <h:inputText/>
+                <h:form styleClass="d-flex flex-column w-50">
+                    <h:outputLabel>Full text</h:outputLabel>
+                    <h:inputTextarea/>
+                    <h:commandButton value="Create a new post" styleClass="btn btn-primary mt-3"/>
+                </h:form>
+            </h:form>
+        </h:form>
+    </div>
 </h:body>
 </html>
